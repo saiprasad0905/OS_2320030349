@@ -1,0 +1,18 @@
+import logging
+
+# Set up logging
+logging.basicConfig(
+    filename='logs/app.log',
+    filemode='a',
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    level=logging.INFO
+)
+
+def log_message(level, message):
+    """Log a message at the given level."""
+    if level == "info":
+        logging.info(message)
+    elif level == "warning":
+        logging.warning(message)
+    elif level == "error":
+        logging.error(message)
